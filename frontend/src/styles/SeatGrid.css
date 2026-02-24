@@ -1,0 +1,143 @@
+.seat-grid-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.seat-grid-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+.seat-available,
+.seat-booked,
+.seat-floater {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+}
+
+.seat-available {
+  background-color: #e8f5e9;
+  border: 2px solid #48bb78;
+}
+
+.seat-booked {
+  background-color: #ffebee;
+  border: 2px solid #ff6b6b;
+}
+
+.seat-floater {
+  background-color: #fff3e0;
+  border: 2px solid #f6ad55;
+}
+
+.grid-section {
+  margin-bottom: 40px;
+}
+
+.grid-section h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.floater-grid {
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.seat {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.seat.available {
+  background-color: #e8f5e9;
+  border-color: #48bb78;
+  color: #2e7d32;
+}
+
+.seat.available:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(72, 187, 120, 0.3);
+}
+
+.seat.booked {
+  background-color: #ffebee;
+  border-color: #ff6b6b;
+  color: #d32f2f;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.seat.floater.available {
+  background-color: #fff3e0;
+  border-color: #f6ad55;
+  color: #e65100;
+}
+
+.seat.floater.booked {
+  background-color: #ffccbc;
+  border-color: #d84315;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .seat-grid-container {
+    padding: 20px;
+  }
+
+  .seat-grid {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  }
+
+  .floater-grid {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  }
+
+  .seat {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .seat-legend {
+    gap: 15px;
+  }
+}

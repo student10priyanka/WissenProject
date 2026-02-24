@@ -1,0 +1,40 @@
+.team-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.team-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.team-form input,
+.team-form select {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.team-form input:focus,
+.team-form select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.teams-table {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .team-form {
+    grid-template-columns: 1fr;
+  }
+}
